@@ -1,0 +1,50 @@
+dburl=jdbc:sqlserver://10.11.4.184:1433;databaseName=Elasticsearch
+dbuser=sa
+dbpwd=P@ssword01
+driverClass=com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+localhost=mha-luft
+
+retries=3
+retrytime=3000
+dbpoolsize=10
+max_rows=100
+maxRunTimeMin=6
+backuppath=/Users/mhajducek/temp/nssync
+#cakanie na item v readqueue v min
+readqueuetimeout=1
+#cakanie na item v updatequeue v min
+updatequeuetimeout=1
+
+updatethreads=1
+readthreads=1
+writerthreads=1
+bulkwritesize=100
+updatequeue=100
+targetdatetimeformat=yyyy-MM-dd'T'HH:mm:ss.SSSXXX
+fallbackdatetimeformat=dd.MM.yyyy H:mm:ss
+
+cols_start=select 
+
+#select mus\u00ed by\u0165 v tvare "select COL01,COL02,....CONN from %TABLE%" so zachovan\u00edm medzier okolo klucovych slov a bez medzier okolo ciarok!!!
+#skutocny nazov tabulky sa dosadza z dbo.NSSYNC_NODES
+#Mus\u00ed obsahova\u0165 unique id stlpec.
+table01=dbo.ntevl_mssql
+columntoelastic01=evl_time_stamp#@timestamp;evl_computer#comp
+select01=select evl_log,evl_severity,evl_source,evl_category,evl_event_id,evl_user,evl_time_stamp,evl_computer,evl_description,id from %TABLE% where export is null;
+timestampcol01=evl_time_stamp
+datetimeformat01=MM/dd/yyyy K:mm:ss a
+maping01=ntevl_mssql
+index01=nimbuslogswin-yyyy.MM.dd
+
+#sql02=select ...
+#indextype02=index....
+
+#sql03=etc
+#indextype03=etcetc
+
+esurl01=http://10.11.4.27:9300
+esurl02=http://10.11.4.231:9300
+esurl03=
+clustername=production
+

@@ -1,0 +1,1039 @@
+2016-07-15 09:55:39,957 DEBUG sk.idm.nssync.Config: DBpool active/idle: 0/0
+2016-07-15 09:55:40,970 DEBUG sk.idm.nssync.Sync: NUM: dbo.ntevl_mssql_master 03 null
+2016-07-15 09:55:40,972 DEBUG sk.idm.nssync.Sync: NUM: dbo.ntevl_mssql 02 0
+2016-07-15 09:55:40,972 DEBUG sk.idm.nssync.Sync: NUM: dbo.ntevl_mssql 03 1
+2016-07-15 09:55:41,208 DEBUG sk.idm.nssync.Sync: NUM: 02 1 5070
+2016-07-15 09:55:41,208 DEBUG sk.idm.nssync.Sync: NUM: 03 null 35323
+2016-07-15 09:55:41,286 DEBUG sk.idm.nssync.Sync: Created 1 writers
+2016-07-15 09:55:41,314 DEBUG sk.idm.nssync.Sync: Created 1 updaters
+2016-07-15 09:55:41,316 DEBUG sk.idm.nssync.Sync: 1
+2016-07-15 09:55:41,321 DEBUG sk.idm.nssync.Updater: Started (0)
+2016-07-15 09:55:41,321 DEBUG sk.idm.nssync.Config: DBpool active/idle: 1/7
+2016-07-15 09:55:41,320 DEBUG sk.idm.nssync.Reader: Started
+2016-07-15 09:55:41,324 DEBUG sk.idm.nssync.Config: DBpool active/idle: 2/6
+2016-07-15 09:55:41,358 INFO sk.idm.nssync.Reader: Executing query: select top 10000 evl_log,evl_severity,evl_source,evl_category,evl_event_id,evl_user,evl_time_stamp,evl_computer,evl_description,id from dbo.ntevl_mssql02 where export is null;
+2016-07-15 09:55:41,361 DEBUG sk.idm.nssync.Reader: NUM: 0 put in readqueue
+2016-07-15 09:55:41,362 INFO sk.idm.nssync.Reader: Success for: select top 10000 evl_log,evl_severity,evl_source,evl_category,evl_event_id,evl_user,evl_time_stamp,evl_computer,evl_description,id from dbo.ntevl_mssql02 where export is null;
+2016-07-15 09:55:41,362 INFO sk.idm.nssync.Reader: Executing query: select top 10000 evl_log,evl_severity,evl_source,evl_category,evl_event_id,evl_user,evl_time_stamp,evl_computer,evl_description,id from dbo.ntevl_mssql03 where export is null;
+2016-07-15 09:55:41,368 INFO sk.idm.nssync.Reader: Processing row: 0
+2016-07-15 09:55:41,471 INFO sk.idm.nssync.Reader: Processing row: 100
+2016-07-15 09:55:43,816 DEBUG sk.idm.nssync.Writer: Added address (0): http://10.11.4.27:9300
+2016-07-15 09:55:43,950 DEBUG sk.idm.nssync.Writer: Added address (0): http://10.11.4.231:9300
+2016-07-15 09:55:43,951 DEBUG sk.idm.nssync.Writer: Started (0)
+2016-07-15 09:55:44,172 INFO sk.idm.nssync.Reader: Processing row: 200
+2016-07-15 09:55:44,172 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,234 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,234 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,235 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 0
+2016-07-15 09:55:44,238 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,241 INFO sk.idm.nssync.Writer: Success (0) for: 36C6B44C-C149-E611-A776-000C291362B7
+2016-07-15 09:55:44,250 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,266 INFO sk.idm.nssync.Reader: Processing row: 300
+2016-07-15 09:55:44,283 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,283 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,283 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,284 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,284 INFO sk.idm.nssync.Writer: Success (0) for: 9C481BB8-C149-E611-A776-000C291362B7
+2016-07-15 09:55:44,322 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,323 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 36C6B44C-C149-E611-A776-000C291362B7
+2016-07-15 09:55:44,323 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:44,367 INFO sk.idm.nssync.Reader: Processing row: 400
+2016-07-15 09:55:44,368 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,368 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 9C481BB8-C149-E611-A776-000C291362B7
+2016-07-15 09:55:44,369 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:44,370 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,405 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,407 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,407 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,411 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,411 INFO sk.idm.nssync.Writer: Success (0) for: D2CB5235-C249-E611-A776-000C291362B7
+2016-07-15 09:55:44,427 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,427 INFO sk.idm.nssync.Reader: Processing row: 500
+2016-07-15 09:55:44,439 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,440 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and D2CB5235-C249-E611-A776-000C291362B7
+2016-07-15 09:55:44,440 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:44,457 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,458 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,458 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,461 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,462 INFO sk.idm.nssync.Writer: Success (0) for: 4248B8A0-C249-E611-A776-000C291362B7
+2016-07-15 09:55:44,488 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,489 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,489 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 4248B8A0-C249-E611-A776-000C291362B7
+2016-07-15 09:55:44,490 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:44,505 INFO sk.idm.nssync.Reader: Processing row: 600
+2016-07-15 09:55:44,542 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,543 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,549 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 0
+2016-07-15 09:55:44,549 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,549 INFO sk.idm.nssync.Writer: Success (0) for: C503FA1D-C349-E611-A776-000C291362B7
+2016-07-15 09:55:44,573 INFO sk.idm.nssync.Reader: Processing row: 700
+2016-07-15 09:55:44,573 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,582 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,583 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and C503FA1D-C349-E611-A776-000C291362B7
+2016-07-15 09:55:44,584 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:44,642 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,643 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,643 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,644 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,644 INFO sk.idm.nssync.Writer: Success (0) for: 7A085889-C349-E611-A776-000C291362B7
+2016-07-15 09:55:44,679 INFO sk.idm.nssync.Reader: Processing row: 800
+2016-07-15 09:55:44,680 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,701 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,702 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 7A085889-C349-E611-A776-000C291362B7
+2016-07-15 09:55:44,702 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:44,721 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,722 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,723 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,724 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,724 INFO sk.idm.nssync.Writer: Success (0) for: 18659806-C449-E611-A776-000C291362B7
+2016-07-15 09:55:44,731 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,731 INFO sk.idm.nssync.Reader: Processing row: 900
+2016-07-15 09:55:44,753 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,754 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,754 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,754 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 18659806-C449-E611-A776-000C291362B7
+2016-07-15 09:55:44,754 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:44,754 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,755 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,755 INFO sk.idm.nssync.Writer: Success (0) for: E285EB71-C449-E611-A776-000C291362B7
+2016-07-15 09:55:44,763 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,765 INFO sk.idm.nssync.Reader: Processing row: 1000
+2016-07-15 09:55:44,784 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,786 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and E285EB71-C449-E611-A776-000C291362B7
+2016-07-15 09:55:44,787 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:44,788 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,789 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,789 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,790 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,790 INFO sk.idm.nssync.Writer: Success (0) for: 500839EC-C449-E611-A776-000C291362B7
+2016-07-15 09:55:44,793 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,799 INFO sk.idm.nssync.Reader: Processing row: 1100
+2016-07-15 09:55:44,816 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,816 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,816 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,816 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,816 INFO sk.idm.nssync.Writer: Success (0) for: 16A5A46B-C549-E611-A776-000C291362B7
+2016-07-15 09:55:44,820 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,825 INFO sk.idm.nssync.Reader: Processing row: 1200
+2016-07-15 09:55:44,840 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,840 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 500839EC-C449-E611-A776-000C291362B7
+2016-07-15 09:55:44,840 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:44,843 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,844 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,844 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,844 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,844 INFO sk.idm.nssync.Writer: Success (0) for: 4E353DD7-C549-E611-A776-000C291362B7
+2016-07-15 09:55:44,848 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,858 INFO sk.idm.nssync.Reader: Processing row: 1300
+2016-07-15 09:55:44,869 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,869 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 16A5A46B-C549-E611-A776-000C291362B7
+2016-07-15 09:55:44,870 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:44,878 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,878 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,879 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,879 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,880 INFO sk.idm.nssync.Writer: Success (0) for: B36DA142-C649-E611-A776-000C291362B7
+2016-07-15 09:55:44,889 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:44,891 INFO sk.idm.nssync.Reader: Processing row: 1400
+2016-07-15 09:55:44,939 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,940 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 4E353DD7-C549-E611-A776-000C291362B7
+2016-07-15 09:55:44,941 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:44,950 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:44,950 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:44,950 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:44,950 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:44,951 INFO sk.idm.nssync.Writer: Success (0) for: 0C22E7BF-C649-E611-A776-000C291362B7
+2016-07-15 09:55:44,973 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:44,973 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and B36DA142-C649-E611-A776-000C291362B7
+2016-07-15 09:55:44,973 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:44,992 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,000 INFO sk.idm.nssync.Reader: Processing row: 1500
+2016-07-15 09:55:45,006 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,006 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 0C22E7BF-C649-E611-A776-000C291362B7
+2016-07-15 09:55:45,007 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:45,016 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,017 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,017 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,018 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,021 INFO sk.idm.nssync.Writer: Success (0) for: 6B893E2B-C749-E611-A776-000C291362B7
+2016-07-15 09:55:45,024 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,026 INFO sk.idm.nssync.Reader: Processing row: 1600
+2016-07-15 09:55:45,048 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,048 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,048 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,049 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,049 INFO sk.idm.nssync.Writer: Success (0) for: 0B256593-C749-E611-A776-000C291362B7
+2016-07-15 09:55:45,056 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,058 INFO sk.idm.nssync.Reader: Processing row: 1700
+2016-07-15 09:55:45,068 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,068 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 6B893E2B-C749-E611-A776-000C291362B7
+2016-07-15 09:55:45,069 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,085 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,087 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,087 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,091 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,091 INFO sk.idm.nssync.Writer: Success (0) for: 4645A610-C849-E611-A776-000C291362B7
+2016-07-15 09:55:45,102 INFO sk.idm.nssync.Reader: Processing row: 1800
+2016-07-15 09:55:45,102 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,107 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,108 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 0B256593-C749-E611-A776-000C291362B7
+2016-07-15 09:55:45,108 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,141 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,141 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,142 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,142 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,142 INFO sk.idm.nssync.Writer: Success (0) for: 7D3D3C7C-C849-E611-A776-000C291362B7
+2016-07-15 09:55:45,144 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,145 INFO sk.idm.nssync.Reader: Processing row: 1900
+2016-07-15 09:55:45,151 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,152 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 4645A610-C849-E611-A776-000C291362B7
+2016-07-15 09:55:45,152 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,178 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,178 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,178 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,178 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,178 INFO sk.idm.nssync.Writer: Success (0) for: 83AF82F9-C849-E611-A776-000C291362B7
+2016-07-15 09:55:45,180 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,180 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,181 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 7D3D3C7C-C849-E611-A776-000C291362B7
+2016-07-15 09:55:45,181 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,182 INFO sk.idm.nssync.Reader: Processing row: 2000
+2016-07-15 09:55:45,205 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,205 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,205 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,206 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,206 INFO sk.idm.nssync.Writer: Success (0) for: 21C25076-C949-E611-A776-000C291362B7
+2016-07-15 09:55:45,207 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,209 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,209 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 83AF82F9-C849-E611-A776-000C291362B7
+2016-07-15 09:55:45,209 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,210 INFO sk.idm.nssync.Reader: Processing row: 2100
+2016-07-15 09:55:45,234 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,235 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,236 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,237 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 21C25076-C949-E611-A776-000C291362B7
+2016-07-15 09:55:45,237 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,236 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,238 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,239 INFO sk.idm.nssync.Writer: Success (0) for: 655DC2F3-C949-E611-A776-000C291362B7
+2016-07-15 09:55:45,241 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,242 INFO sk.idm.nssync.Reader: Processing row: 2200
+2016-07-15 09:55:45,262 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,263 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,264 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,265 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,265 INFO sk.idm.nssync.Writer: Success (0) for: D234ED5E-CA49-E611-A776-000C291362B7
+2016-07-15 09:55:45,267 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,267 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 655DC2F3-C949-E611-A776-000C291362B7
+2016-07-15 09:55:45,267 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,273 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,273 INFO sk.idm.nssync.Reader: Processing row: 2300
+2016-07-15 09:55:45,592 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,592 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and D234ED5E-CA49-E611-A776-000C291362B7
+2016-07-15 09:55:45,592 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:45,600 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,601 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,601 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,603 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,604 INFO sk.idm.nssync.Writer: Success (0) for: 6CCDABDC-CA49-E611-A776-000C291362B7
+2016-07-15 09:55:45,605 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,606 INFO sk.idm.nssync.Reader: Processing row: 2400
+2016-07-15 09:55:45,626 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,626 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 6CCDABDC-CA49-E611-A776-000C291362B7
+2016-07-15 09:55:45,626 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:45,632 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,634 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,635 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,635 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,636 INFO sk.idm.nssync.Writer: Success (0) for: 2AC7FE47-CB49-E611-A776-000C291362B7
+2016-07-15 09:55:45,638 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,640 INFO sk.idm.nssync.Reader: Processing row: 2500
+2016-07-15 09:55:45,661 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,662 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,662 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,662 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,662 INFO sk.idm.nssync.Writer: Success (0) for: B06D41C5-CB49-E611-A776-000C291362B7
+2016-07-15 09:55:45,664 INFO sk.idm.nssync.Reader: Processing row: 2600
+2016-07-15 09:55:45,664 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,664 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,665 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 2AC7FE47-CB49-E611-A776-000C291362B7
+2016-07-15 09:55:45,665 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,686 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,687 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,688 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,688 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,688 INFO sk.idm.nssync.Writer: Success (0) for: 67799D30-CC49-E611-A776-000C291362B7
+2016-07-15 09:55:45,690 INFO sk.idm.nssync.Reader: Processing row: 2700
+2016-07-15 09:55:45,690 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,693 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,693 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and B06D41C5-CB49-E611-A776-000C291362B7
+2016-07-15 09:55:45,694 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,716 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,717 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,717 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,717 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,717 INFO sk.idm.nssync.Writer: Success (0) for: 4CD7E6AD-CC49-E611-A776-000C291362B7
+2016-07-15 09:55:45,722 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,722 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 67799D30-CC49-E611-A776-000C291362B7
+2016-07-15 09:55:45,722 INFO sk.idm.nssync.Reader: Processing row: 2800
+2016-07-15 09:55:45,722 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,722 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,753 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,754 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,754 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,755 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,755 INFO sk.idm.nssync.Writer: Success (0) for: A4C3A92A-CD49-E611-A776-000C291362B7
+2016-07-15 09:55:45,756 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,758 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,758 INFO sk.idm.nssync.Reader: Processing row: 2900
+2016-07-15 09:55:45,758 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 4CD7E6AD-CC49-E611-A776-000C291362B7
+2016-07-15 09:55:45,758 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,780 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,781 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,781 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,781 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,781 INFO sk.idm.nssync.Writer: Success (0) for: F3978996-CD49-E611-A776-000C291362B7
+2016-07-15 09:55:45,783 INFO sk.idm.nssync.Reader: Processing row: 3000
+2016-07-15 09:55:45,783 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,785 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,786 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and A4C3A92A-CD49-E611-A776-000C291362B7
+2016-07-15 09:55:45,787 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,806 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,807 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,807 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,808 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,808 INFO sk.idm.nssync.Writer: Success (0) for: 2647C813-CE49-E611-A776-000C291362B7
+2016-07-15 09:55:45,811 INFO sk.idm.nssync.Reader: Processing row: 3100
+2016-07-15 09:55:45,812 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,814 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,814 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and F3978996-CD49-E611-A776-000C291362B7
+2016-07-15 09:55:45,814 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,837 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,843 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,844 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 2647C813-CE49-E611-A776-000C291362B7
+2016-07-15 09:55:45,847 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:45,843 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,847 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,852 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,856 INFO sk.idm.nssync.Writer: Success (0) for: DE2C2C7F-CE49-E611-A776-000C291362B7
+2016-07-15 09:55:45,872 INFO sk.idm.nssync.Reader: Processing row: 3200
+2016-07-15 09:55:45,873 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,874 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and DE2C2C7F-CE49-E611-A776-000C291362B7
+2016-07-15 09:55:45,874 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:45,874 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,913 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,913 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,914 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,920 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,921 INFO sk.idm.nssync.Writer: Success (0) for: 46626CFC-CE49-E611-A776-000C291362B7
+2016-07-15 09:55:45,923 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,925 INFO sk.idm.nssync.Reader: Processing row: 3300
+2016-07-15 09:55:45,950 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,951 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,951 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,951 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,951 INFO sk.idm.nssync.Writer: Success (0) for: 6480C367-CF49-E611-A776-000C291362B7
+2016-07-15 09:55:45,955 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,955 INFO sk.idm.nssync.Reader: Processing row: 3400
+2016-07-15 09:55:45,959 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,959 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 46626CFC-CE49-E611-A776-000C291362B7
+2016-07-15 09:55:45,960 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:45,978 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:45,979 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:45,979 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:45,979 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:45,979 INFO sk.idm.nssync.Writer: Success (0) for: AA48EDF6-CF49-E611-A776-000C291362B7
+2016-07-15 09:55:45,980 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:45,980 INFO sk.idm.nssync.Reader: Processing row: 3500
+2016-07-15 09:55:45,991 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:45,992 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 6480C367-CF49-E611-A776-000C291362B7
+2016-07-15 09:55:45,992 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:46,003 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,003 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,003 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:46,003 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,003 INFO sk.idm.nssync.Writer: Success (0) for: 02155F50-D049-E611-A776-000C291362B7
+2016-07-15 09:55:46,007 INFO sk.idm.nssync.Reader: Processing row: 3600
+2016-07-15 09:55:46,008 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,022 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,023 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and AA48EDF6-CF49-E611-A776-000C291362B7
+2016-07-15 09:55:46,023 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:46,031 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,031 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,031 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:46,032 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,032 INFO sk.idm.nssync.Writer: Success (0) for: 140999CD-D049-E611-A776-000C291362B7
+2016-07-15 09:55:46,034 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,037 INFO sk.idm.nssync.Reader: Processing row: 3700
+2016-07-15 09:55:46,053 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,054 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 02155F50-D049-E611-A776-000C291362B7
+2016-07-15 09:55:46,054 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:46,057 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,057 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,057 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:46,058 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,058 INFO sk.idm.nssync.Writer: Success (0) for: 9D4E0439-D149-E611-A776-000C291362B7
+2016-07-15 09:55:46,059 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,059 INFO sk.idm.nssync.Reader: Processing row: 3800
+2016-07-15 09:55:46,082 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,082 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,083 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,083 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,083 INFO sk.idm.nssync.Writer: Success (0) for: 09583DB6-D149-E611-A776-000C291362B7
+2016-07-15 09:55:46,084 INFO sk.idm.nssync.Reader: Processing row: 3900
+2016-07-15 09:55:46,084 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,087 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,087 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 140999CD-D049-E611-A776-000C291362B7
+2016-07-15 09:55:46,087 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,107 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,108 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,109 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,109 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,109 INFO sk.idm.nssync.Writer: Success (0) for: 7B8D7D33-D249-E611-A776-000C291362B7
+2016-07-15 09:55:46,110 INFO sk.idm.nssync.Reader: Processing row: 4000
+2016-07-15 09:55:46,110 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,123 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,124 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 9D4E0439-D149-E611-A776-000C291362B7
+2016-07-15 09:55:46,124 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,141 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,141 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,141 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,141 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,141 INFO sk.idm.nssync.Writer: Success (0) for: DFB4419E-D249-E611-A776-000C291362B7
+2016-07-15 09:55:46,142 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,142 INFO sk.idm.nssync.Reader: Processing row: 4100
+2016-07-15 09:55:46,155 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,155 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 09583DB6-D149-E611-A776-000C291362B7
+2016-07-15 09:55:46,155 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,178 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,178 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,178 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,178 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,178 INFO sk.idm.nssync.Writer: Success (0) for: 51A07F1B-D349-E611-A776-000C291362B7
+2016-07-15 09:55:46,179 INFO sk.idm.nssync.Reader: Processing row: 4200
+2016-07-15 09:55:46,180 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,187 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,187 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 7B8D7D33-D249-E611-A776-000C291362B7
+2016-07-15 09:55:46,187 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,211 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,212 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,212 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,212 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,212 INFO sk.idm.nssync.Writer: Success (0) for: F3D4E286-D349-E611-A776-000C291362B7
+2016-07-15 09:55:46,215 INFO sk.idm.nssync.Reader: Processing row: 4300
+2016-07-15 09:55:46,215 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,223 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,223 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and DFB4419E-D249-E611-A776-000C291362B7
+2016-07-15 09:55:46,223 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,248 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,248 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,248 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,248 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,249 INFO sk.idm.nssync.Writer: Success (0) for: 24530A16-D449-E611-A776-000C291362B7
+2016-07-15 09:55:46,250 INFO sk.idm.nssync.Reader: Processing row: 4400
+2016-07-15 09:55:46,250 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,260 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,260 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 51A07F1B-D349-E611-A776-000C291362B7
+2016-07-15 09:55:46,260 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,281 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,282 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,282 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,282 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,282 INFO sk.idm.nssync.Writer: Success (0) for: 59336081-D449-E611-A776-000C291362B7
+2016-07-15 09:55:46,283 INFO sk.idm.nssync.Reader: Processing row: 4500
+2016-07-15 09:55:46,283 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,300 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,300 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and F3D4E286-D349-E611-A776-000C291362B7
+2016-07-15 09:55:46,300 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,313 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,314 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,314 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,314 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,314 INFO sk.idm.nssync.Writer: Success (0) for: C258A8FE-D449-E611-A776-000C291362B7
+2016-07-15 09:55:46,315 INFO sk.idm.nssync.Reader: Processing row: 4600
+2016-07-15 09:55:46,315 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,343 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,343 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 24530A16-D449-E611-A776-000C291362B7
+2016-07-15 09:55:46,343 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,349 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,349 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,349 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,349 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,349 INFO sk.idm.nssync.Writer: Success (0) for: 146A0C6A-D549-E611-A776-000C291362B7
+2016-07-15 09:55:46,351 INFO sk.idm.nssync.Reader: Processing row: 4700
+2016-07-15 09:55:46,352 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,370 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,371 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 59336081-D449-E611-A776-000C291362B7
+2016-07-15 09:55:46,371 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,389 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,389 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,389 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,390 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,390 INFO sk.idm.nssync.Writer: Success (0) for: DB44B3E6-D549-E611-A776-000C291362B7
+2016-07-15 09:55:46,390 INFO sk.idm.nssync.Reader: Processing row: 4800
+2016-07-15 09:55:46,391 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,397 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,397 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and C258A8FE-D449-E611-A776-000C291362B7
+2016-07-15 09:55:46,397 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,425 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,425 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,425 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,425 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,425 INFO sk.idm.nssync.Writer: Success (0) for: 77781952-D649-E611-A776-000C291362B7
+2016-07-15 09:55:46,428 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,428 INFO sk.idm.nssync.Reader: Processing row: 4900
+2016-07-15 09:55:46,456 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,456 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 146A0C6A-D549-E611-A776-000C291362B7
+2016-07-15 09:55:46,456 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,460 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,460 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,460 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,460 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,460 INFO sk.idm.nssync.Writer: Success (0) for: E7685ECF-D649-E611-A776-000C291362B7
+2016-07-15 09:55:46,461 INFO sk.idm.nssync.Reader: Processing row: 5000
+2016-07-15 09:55:46,461 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,486 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,486 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and DB44B3E6-D549-E611-A776-000C291362B7
+2016-07-15 09:55:46,486 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,500 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,500 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,501 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,501 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,501 INFO sk.idm.nssync.Writer: Success (0) for: EBE0B63A-D749-E611-A776-000C291362B7
+2016-07-15 09:55:46,501 INFO sk.idm.nssync.Reader: Processing row: 5100
+2016-07-15 09:55:46,503 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,538 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,538 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 77781952-D649-E611-A776-000C291362B7
+2016-07-15 09:55:46,538 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,547 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,547 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,547 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,547 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,548 INFO sk.idm.nssync.Writer: Success (0) for: 4735FBB7-D749-E611-A776-000C291362B7
+2016-07-15 09:55:46,550 INFO sk.idm.nssync.Reader: Processing row: 5200
+2016-07-15 09:55:46,550 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,587 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,588 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,588 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 3
+2016-07-15 09:55:46,588 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,589 INFO sk.idm.nssync.Writer: Success (0) for: E8546B23-D849-E611-A776-000C291362B7
+2016-07-15 09:55:46,590 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,591 INFO sk.idm.nssync.Reader: Processing row: 5300
+2016-07-15 09:55:46,595 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,595 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and E7685ECF-D649-E611-A776-000C291362B7
+2016-07-15 09:55:46,595 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 3
+2016-07-15 09:55:46,622 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,622 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and EBE0B63A-D749-E611-A776-000C291362B7
+2016-07-15 09:55:46,623 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,624 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,624 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,624 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,624 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,624 INFO sk.idm.nssync.Writer: Success (0) for: 2193A7A0-D849-E611-A776-000C291362B7
+2016-07-15 09:55:46,625 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,625 INFO sk.idm.nssync.Reader: Processing row: 5400
+2016-07-15 09:55:46,651 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,651 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 4735FBB7-D749-E611-A776-000C291362B7
+2016-07-15 09:55:46,651 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,655 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,655 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,655 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,655 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,655 INFO sk.idm.nssync.Writer: Success (0) for: 5BFDEA1D-D949-E611-A776-000C291362B7
+2016-07-15 09:55:46,658 INFO sk.idm.nssync.Reader: Processing row: 5500
+2016-07-15 09:55:46,659 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,680 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,681 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and E8546B23-D849-E611-A776-000C291362B7
+2016-07-15 09:55:46,681 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,695 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,695 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,696 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,696 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,696 INFO sk.idm.nssync.Writer: Success (0) for: D2401189-D949-E611-A776-000C291362B7
+2016-07-15 09:55:46,700 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,702 INFO sk.idm.nssync.Reader: Processing row: 5600
+2016-07-15 09:55:46,709 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,709 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 2193A7A0-D849-E611-A776-000C291362B7
+2016-07-15 09:55:46,709 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,734 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,734 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,734 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,734 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,734 INFO sk.idm.nssync.Writer: Success (0) for: 5A3C3B09-DA49-E611-A776-000C291362B7
+2016-07-15 09:55:46,737 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,738 INFO sk.idm.nssync.Reader: Processing row: 5700
+2016-07-15 09:55:46,740 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,740 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 5BFDEA1D-D949-E611-A776-000C291362B7
+2016-07-15 09:55:46,740 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,769 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,770 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,770 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,771 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,771 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,771 INFO sk.idm.nssync.Writer: Success (0) for: 8E9ECB83-DA49-E611-A776-000C291362B7
+2016-07-15 09:55:46,771 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and D2401189-D949-E611-A776-000C291362B7
+2016-07-15 09:55:46,772 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,772 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,773 INFO sk.idm.nssync.Reader: Processing row: 5800
+2016-07-15 09:55:46,799 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,799 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 5A3C3B09-DA49-E611-A776-000C291362B7
+2016-07-15 09:55:46,799 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:46,801 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,801 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,801 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:46,801 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,801 INFO sk.idm.nssync.Writer: Success (0) for: 341C34EF-DA49-E611-A776-000C291362B7
+2016-07-15 09:55:46,803 INFO sk.idm.nssync.Reader: Processing row: 5900
+2016-07-15 09:55:46,803 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,825 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,825 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,825 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,825 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,825 INFO sk.idm.nssync.Writer: Success (0) for: 4B81766C-DB49-E611-A776-000C291362B7
+2016-07-15 09:55:46,826 INFO sk.idm.nssync.Reader: Processing row: 6000
+2016-07-15 09:55:46,826 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,827 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,827 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 8E9ECB83-DA49-E611-A776-000C291362B7
+2016-07-15 09:55:46,827 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,846 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,846 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,846 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,846 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,846 INFO sk.idm.nssync.Writer: Success (0) for: 541A3BD7-DB49-E611-A776-000C291362B7
+2016-07-15 09:55:46,847 INFO sk.idm.nssync.Reader: Processing row: 6100
+2016-07-15 09:55:46,847 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,855 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,855 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 341C34EF-DA49-E611-A776-000C291362B7
+2016-07-15 09:55:46,855 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,869 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,870 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,870 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,870 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,870 INFO sk.idm.nssync.Writer: Success (0) for: A53F8354-DC49-E611-A776-000C291362B7
+2016-07-15 09:55:46,873 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,872 INFO sk.idm.nssync.Reader: Processing row: 6200
+2016-07-15 09:55:46,885 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,885 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 4B81766C-DB49-E611-A776-000C291362B7
+2016-07-15 09:55:46,886 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,900 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,900 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,900 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,900 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,900 INFO sk.idm.nssync.Writer: Success (0) for: EF69DBBF-DC49-E611-A776-000C291362B7
+2016-07-15 09:55:46,902 INFO sk.idm.nssync.Reader: Processing row: 6300
+2016-07-15 09:55:46,902 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,913 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,913 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 541A3BD7-DB49-E611-A776-000C291362B7
+2016-07-15 09:55:46,913 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,925 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,925 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,925 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,926 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,926 INFO sk.idm.nssync.Writer: Success (0) for: 596AFF4E-DD49-E611-A776-000C291362B7
+2016-07-15 09:55:46,927 INFO sk.idm.nssync.Reader: Processing row: 6400
+2016-07-15 09:55:46,928 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,944 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,944 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and A53F8354-DC49-E611-A776-000C291362B7
+2016-07-15 09:55:46,944 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,957 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,957 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,957 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,957 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,957 INFO sk.idm.nssync.Writer: Success (0) for: 3F2B89A8-DD49-E611-A776-000C291362B7
+2016-07-15 09:55:46,959 INFO sk.idm.nssync.Reader: Processing row: 6500
+2016-07-15 09:55:46,961 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:46,974 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:46,975 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and EF69DBBF-DC49-E611-A776-000C291362B7
+2016-07-15 09:55:46,975 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:46,984 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:46,984 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:46,984 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:46,984 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:46,984 INFO sk.idm.nssync.Writer: Success (0) for: 7C23AD37-DE49-E611-A776-000C291362B7
+2016-07-15 09:55:46,986 INFO sk.idm.nssync.Reader: Processing row: 6600
+2016-07-15 09:55:46,990 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,003 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,003 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 596AFF4E-DD49-E611-A776-000C291362B7
+2016-07-15 09:55:47,003 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,013 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,013 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,013 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,013 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,013 INFO sk.idm.nssync.Writer: Success (0) for: 2BDABEA5-DE49-E611-A776-000C291362B7
+2016-07-15 09:55:47,016 INFO sk.idm.nssync.Reader: Processing row: 6700
+2016-07-15 09:55:47,037 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,041 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 3F2B89A8-DD49-E611-A776-000C291362B7
+2016-07-15 09:55:47,043 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,044 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,069 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,070 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,070 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 7C23AD37-DE49-E611-A776-000C291362B7
+2016-07-15 09:55:47,071 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,070 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,071 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,071 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,071 INFO sk.idm.nssync.Writer: Success (0) for: 4FCB5B20-DF49-E611-A776-000C291362B7
+2016-07-15 09:55:47,072 INFO sk.idm.nssync.Reader: Processing row: 6800
+2016-07-15 09:55:47,073 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,099 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,099 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,100 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,100 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,100 INFO sk.idm.nssync.Writer: Success (0) for: 841CB48B-DF49-E611-A776-000C291362B7
+2016-07-15 09:55:47,102 INFO sk.idm.nssync.Reader: Processing row: 6900
+2016-07-15 09:55:47,103 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,105 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,105 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 2BDABEA5-DE49-E611-A776-000C291362B7
+2016-07-15 09:55:47,105 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,136 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,136 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,137 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,137 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,137 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,137 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 4FCB5B20-DF49-E611-A776-000C291362B7
+2016-07-15 09:55:47,138 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,138 INFO sk.idm.nssync.Writer: Success (0) for: 56C1B805-E049-E611-A776-000C291362B7
+2016-07-15 09:55:47,139 INFO sk.idm.nssync.Reader: Processing row: 7000
+2016-07-15 09:55:47,139 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,166 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,166 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 841CB48B-DF49-E611-A776-000C291362B7
+2016-07-15 09:55:47,166 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,167 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,167 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,167 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,167 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,167 INFO sk.idm.nssync.Writer: Success (0) for: C1482F5F-E049-E611-A776-000C291362B7
+2016-07-15 09:55:47,168 INFO sk.idm.nssync.Reader: Processing row: 7100
+2016-07-15 09:55:47,169 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,193 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,193 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 56C1B805-E049-E611-A776-000C291362B7
+2016-07-15 09:55:47,193 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,194 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,195 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,195 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,195 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,195 INFO sk.idm.nssync.Writer: Success (0) for: 5E214EF1-E049-E611-A776-000C291362B7
+2016-07-15 09:55:47,196 INFO sk.idm.nssync.Reader: Processing row: 7200
+2016-07-15 09:55:47,197 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,221 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,222 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,222 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,222 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,222 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,222 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and C1482F5F-E049-E611-A776-000C291362B7
+2016-07-15 09:55:47,222 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,222 INFO sk.idm.nssync.Writer: Success (0) for: 42D8BA59-E149-E611-A776-000C291362B7
+2016-07-15 09:55:47,222 INFO sk.idm.nssync.Reader: Processing row: 7300
+2016-07-15 09:55:47,223 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,244 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,244 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,245 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,245 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,245 INFO sk.idm.nssync.Writer: Success (0) for: 5AA73FD7-E149-E611-A776-000C291362B7
+2016-07-15 09:55:47,247 INFO sk.idm.nssync.Reader: Processing row: 7400
+2016-07-15 09:55:47,248 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,249 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,249 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 5E214EF1-E049-E611-A776-000C291362B7
+2016-07-15 09:55:47,249 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,271 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,271 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,271 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,271 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,271 INFO sk.idm.nssync.Writer: Success (0) for: D2BE9B42-E249-E611-A776-000C291362B7
+2016-07-15 09:55:47,271 INFO sk.idm.nssync.Reader: Processing row: 7500
+2016-07-15 09:55:47,272 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,276 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,276 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 42D8BA59-E149-E611-A776-000C291362B7
+2016-07-15 09:55:47,276 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,295 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,296 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,296 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,296 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,296 INFO sk.idm.nssync.Writer: Success (0) for: 8C2B04C2-E249-E611-A776-000C291362B7
+2016-07-15 09:55:47,296 INFO sk.idm.nssync.Reader: Processing row: 7600
+2016-07-15 09:55:47,297 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,304 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,305 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 5AA73FD7-E149-E611-A776-000C291362B7
+2016-07-15 09:55:47,305 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,323 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,323 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,324 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,324 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,324 INFO sk.idm.nssync.Writer: Success (0) for: C892F32A-E349-E611-A776-000C291362B7
+2016-07-15 09:55:47,324 INFO sk.idm.nssync.Reader: Processing row: 7700
+2016-07-15 09:55:47,325 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,341 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,341 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and D2BE9B42-E249-E611-A776-000C291362B7
+2016-07-15 09:55:47,341 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,349 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,350 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,350 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,350 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,350 INFO sk.idm.nssync.Writer: Success (0) for: 90317BA8-E349-E611-A776-000C291362B7
+2016-07-15 09:55:47,350 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,351 INFO sk.idm.nssync.Reader: Processing row: 7800
+2016-07-15 09:55:47,380 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,381 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 8C2B04C2-E249-E611-A776-000C291362B7
+2016-07-15 09:55:47,381 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,381 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,381 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,382 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,382 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,382 INFO sk.idm.nssync.Writer: Success (0) for: 9EBDC825-E449-E611-A776-000C291362B7
+2016-07-15 09:55:47,384 INFO sk.idm.nssync.Reader: Processing row: 7900
+2016-07-15 09:55:47,385 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,409 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,409 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and C892F32A-E349-E611-A776-000C291362B7
+2016-07-15 09:55:47,409 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,433 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,433 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,433 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,433 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,433 INFO sk.idm.nssync.Writer: Success (0) for: EB9D1E91-E449-E611-A776-000C291362B7
+2016-07-15 09:55:47,433 INFO sk.idm.nssync.Reader: Processing row: 8000
+2016-07-15 09:55:47,434 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,438 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,438 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 90317BA8-E349-E611-A776-000C291362B7
+2016-07-15 09:55:47,438 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,467 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,467 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,467 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,467 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,468 INFO sk.idm.nssync.Writer: Success (0) for: 437E6B0E-E549-E611-A776-000C291362B7
+2016-07-15 09:55:47,469 INFO sk.idm.nssync.Reader: Processing row: 8100
+2016-07-15 09:55:47,472 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,475 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,475 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 9EBDC825-E449-E611-A776-000C291362B7
+2016-07-15 09:55:47,475 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,502 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,503 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,503 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,503 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,503 INFO sk.idm.nssync.Writer: Success (0) for: BE45CD79-E549-E611-A776-000C291362B7
+2016-07-15 09:55:47,504 INFO sk.idm.nssync.Reader: Processing row: 8200
+2016-07-15 09:55:47,505 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,514 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,515 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and EB9D1E91-E449-E611-A776-000C291362B7
+2016-07-15 09:55:47,515 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,534 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,534 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,534 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,534 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,534 INFO sk.idm.nssync.Writer: Success (0) for: D71207F7-E549-E611-A776-000C291362B7
+2016-07-15 09:55:47,534 INFO sk.idm.nssync.Reader: Processing row: 8300
+2016-07-15 09:55:47,536 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,543 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,543 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 437E6B0E-E549-E611-A776-000C291362B7
+2016-07-15 09:55:47,543 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,563 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,563 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,564 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,564 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,564 INFO sk.idm.nssync.Writer: Success (0) for: BAD26A62-E649-E611-A776-000C291362B7
+2016-07-15 09:55:47,564 INFO sk.idm.nssync.Reader: Processing row: 8400
+2016-07-15 09:55:47,564 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,573 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,573 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and BE45CD79-E549-E611-A776-000C291362B7
+2016-07-15 09:55:47,573 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,595 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,595 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,595 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,595 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,595 INFO sk.idm.nssync.Writer: Success (0) for: 2808ABDF-E649-E611-A776-000C291362B7
+2016-07-15 09:55:47,596 INFO sk.idm.nssync.Reader: Processing row: 8500
+2016-07-15 09:55:47,598 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,601 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,601 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and D71207F7-E549-E611-A776-000C291362B7
+2016-07-15 09:55:47,601 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,623 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,623 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,623 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,623 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,624 INFO sk.idm.nssync.Writer: Success (0) for: A6A0E15C-E749-E611-A776-000C291362B7
+2016-07-15 09:55:47,624 INFO sk.idm.nssync.Reader: Processing row: 8600
+2016-07-15 09:55:47,625 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,629 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,629 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and BAD26A62-E649-E611-A776-000C291362B7
+2016-07-15 09:55:47,629 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,653 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,653 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,653 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:47,654 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,654 INFO sk.idm.nssync.Writer: Success (0) for: A60446C8-E749-E611-A776-000C291362B7
+2016-07-15 09:55:47,655 INFO sk.idm.nssync.Reader: Processing row: 8700
+2016-07-15 09:55:47,655 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,658 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,658 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 2808ABDF-E649-E611-A776-000C291362B7
+2016-07-15 09:55:47,659 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:47,687 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,687 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and A6A0E15C-E749-E611-A776-000C291362B7
+2016-07-15 09:55:47,687 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,692 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,692 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,692 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,692 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,692 INFO sk.idm.nssync.Writer: Success (0) for: D1D68645-E849-E611-A776-000C291362B7
+2016-07-15 09:55:47,692 INFO sk.idm.nssync.Reader: Processing row: 8800
+2016-07-15 09:55:47,693 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,715 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,715 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and A60446C8-E749-E611-A776-000C291362B7
+2016-07-15 09:55:47,715 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,724 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,724 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,724 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,724 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,724 INFO sk.idm.nssync.Writer: Success (0) for: 2FE3E3B0-E849-E611-A776-000C291362B7
+2016-07-15 09:55:47,725 INFO sk.idm.nssync.Reader: Processing row: 8900
+2016-07-15 09:55:47,726 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,741 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,741 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and D1D68645-E849-E611-A776-000C291362B7
+2016-07-15 09:55:47,741 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,754 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,754 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,754 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,754 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,754 INFO sk.idm.nssync.Writer: Success (0) for: 94D71440-E949-E611-A776-000C291362B7
+2016-07-15 09:55:47,755 INFO sk.idm.nssync.Reader: Processing row: 9000
+2016-07-15 09:55:47,755 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,772 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,772 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 2FE3E3B0-E849-E611-A776-000C291362B7
+2016-07-15 09:55:47,772 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,781 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,782 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,782 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,782 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,782 INFO sk.idm.nssync.Writer: Success (0) for: 09D08D99-E949-E611-A776-000C291362B7
+2016-07-15 09:55:47,783 INFO sk.idm.nssync.Reader: Processing row: 9100
+2016-07-15 09:55:47,783 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,799 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,799 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 94D71440-E949-E611-A776-000C291362B7
+2016-07-15 09:55:47,800 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,813 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,813 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,813 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,813 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,813 INFO sk.idm.nssync.Writer: Success (0) for: 2F93B028-EA49-E611-A776-000C291362B7
+2016-07-15 09:55:47,813 INFO sk.idm.nssync.Reader: Processing row: 9200
+2016-07-15 09:55:47,814 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,827 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,827 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 09D08D99-E949-E611-A776-000C291362B7
+2016-07-15 09:55:47,827 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,842 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,842 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,842 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,842 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,842 INFO sk.idm.nssync.Writer: Success (0) for: 97151794-EA49-E611-A776-000C291362B7
+2016-07-15 09:55:47,842 INFO sk.idm.nssync.Reader: Processing row: 9300
+2016-07-15 09:55:47,844 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,854 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,855 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 2F93B028-EA49-E611-A776-000C291362B7
+2016-07-15 09:55:47,855 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,874 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,874 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,874 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,874 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,874 INFO sk.idm.nssync.Writer: Success (0) for: E30E5811-EB49-E611-A776-000C291362B7
+2016-07-15 09:55:47,874 INFO sk.idm.nssync.Reader: Processing row: 9400
+2016-07-15 09:55:47,875 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,882 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,882 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 97151794-EA49-E611-A776-000C291362B7
+2016-07-15 09:55:47,882 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,905 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,905 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,905 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,905 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,906 INFO sk.idm.nssync.Writer: Success (0) for: 66D6127C-EB49-E611-A776-000C291362B7
+2016-07-15 09:55:47,908 INFO sk.idm.nssync.Reader: Processing row: 9500
+2016-07-15 09:55:47,908 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,910 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,910 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and E30E5811-EB49-E611-A776-000C291362B7
+2016-07-15 09:55:47,910 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,936 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,936 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 66D6127C-EB49-E611-A776-000C291362B7
+2016-07-15 09:55:47,936 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 0
+2016-07-15 09:55:47,943 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,944 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,944 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,945 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,945 INFO sk.idm.nssync.Writer: Success (0) for: C66361F9-EB49-E611-A776-000C291362B7
+2016-07-15 09:55:47,947 INFO sk.idm.nssync.Reader: Processing row: 9600
+2016-07-15 09:55:47,948 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,971 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,971 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,971 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,971 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,971 INFO sk.idm.nssync.Writer: Success (0) for: 26E3A376-EC49-E611-A776-000C291362B7
+2016-07-15 09:55:47,971 INFO sk.idm.nssync.Reader: Processing row: 9700
+2016-07-15 09:55:47,971 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:47,971 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and C66361F9-EB49-E611-A776-000C291362B7
+2016-07-15 09:55:47,971 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:47,972 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:47,994 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:47,994 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:47,994 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:47,994 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:47,994 INFO sk.idm.nssync.Writer: Success (0) for: 12E6FBE1-EC49-E611-A776-000C291362B7
+2016-07-15 09:55:47,994 INFO sk.idm.nssync.Reader: Processing row: 9800
+2016-07-15 09:55:47,996 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:48,002 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:48,002 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 26E3A376-EC49-E611-A776-000C291362B7
+2016-07-15 09:55:48,002 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:48,022 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:48,022 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:48,022 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:48,022 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:48,022 INFO sk.idm.nssync.Writer: Success (0) for: 68653E5F-ED49-E611-A776-000C291362B7
+2016-07-15 09:55:48,022 INFO sk.idm.nssync.Reader: Processing row: 9900
+2016-07-15 09:55:48,024 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:48,031 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:48,031 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 12E6FBE1-EC49-E611-A776-000C291362B7
+2016-07-15 09:55:48,031 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:48,048 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:48,048 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:48,048 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:48,048 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 0
+2016-07-15 09:55:48,048 INFO sk.idm.nssync.Writer: Success (0) for: B2DAA1CA-ED49-E611-A776-000C291362B7
+2016-07-15 09:55:48,048 DEBUG sk.idm.nssync.Reader: NUM: 10000 put in readqueue
+2016-07-15 09:55:48,049 INFO sk.idm.nssync.Reader: Success for: select top 10000 evl_log,evl_severity,evl_source,evl_category,evl_event_id,evl_user,evl_time_stamp,evl_computer,evl_description,id from dbo.ntevl_mssql03 where export is null;
+2016-07-15 09:55:48,049 INFO sk.idm.nssync.Reader: Ended
+2016-07-15 09:55:48,049 DEBUG sk.idm.nssync.Reader: Sending exit message to readQueue
+2016-07-15 09:55:48,049 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 101
+2016-07-15 09:55:48,057 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:48,057 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and 68653E5F-ED49-E611-A776-000C291362B7
+2016-07-15 09:55:48,057 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:48,072 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:48,072 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 101
+2016-07-15 09:55:48,072 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 1
+2016-07-15 09:55:48,072 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 98
+2016-07-15 09:55:48,072 INFO sk.idm.nssync.Writer: Success (0) for: EE04FA35-EE49-E611-A776-000C291362B7
+2016-07-15 09:55:48,072 DEBUG sk.idm.nssync.Writer: NUM: Indexed documents to update (0): 1
+2016-07-15 09:55:48,076 INFO sk.idm.nssync.Writer: Bulk indexing succeeded. (0)
+2016-07-15 09:55:48,076 DEBUG sk.idm.nssync.Writer: UpdateQueue put (0): dbo.ntevl_mssql03 1
+2016-07-15 09:55:48,076 DEBUG sk.idm.nssync.Writer: UpdateQueue size (0): 2
+2016-07-15 09:55:48,076 DEBUG sk.idm.nssync.Writer: ReadQueue remaining size (0): 99
+2016-07-15 09:55:48,076 INFO sk.idm.nssync.Writer: Success (0) for: exit
+2016-07-15 09:55:48,076 DEBUG sk.idm.nssync.Writer: UpdateQueue size (exit) (0):3
+2016-07-15 09:55:48,076 DEBUG sk.idm.nssync.Writer: Ended (0)
+2016-07-15 09:55:48,084 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:48,084 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and B2DAA1CA-ED49-E611-A776-000C291362B7
+2016-07-15 09:55:48,085 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 3
+2016-07-15 09:55:48,114 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 101 101
+2016-07-15 09:55:48,114 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and EE04FA35-EE49-E611-A776-000C291362B7
+2016-07-15 09:55:48,114 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 2
+2016-07-15 09:55:48,116 DEBUG sk.idm.nssync.Updater: NUM: Batch size: 1 1
+2016-07-15 09:55:48,116 INFO sk.idm.nssync.Updater: Success (0) for: update dbo.ntevl_mssql03 set export=1 where id = ? and F004FA35-EE49-E611-A776-000C291362B7
+2016-07-15 09:55:48,117 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0): 1
+2016-07-15 09:55:48,117 DEBUG sk.idm.nssync.Updater: UpdateQueue size (0) (exit): 0
+2016-07-15 09:55:48,117 DEBUG sk.idm.nssync.Updater: Ended (0)
+2016-07-15 09:55:48,165 DEBUG sk.idm.nssync.Sync: 2
+2016-07-15 09:55:48,165 DEBUG sk.idm.nssync.Sync: 3
+2016-07-15 09:55:48,167 DEBUG sk.idm.nssync.Sync: 4
+2016-07-15 09:55:48,167 DEBUG sk.idm.nssync.Sync: select * from dbo.nssync_config where table_name = 'dbo.ntevl_mssql'
+2016-07-15 09:55:48,175 DEBUG sk.idm.nssync.Sync: truncate table dbo.ntevl_mssql02
+2016-07-15 09:55:48,190 DEBUG sk.idm.nssync.Sync: NUM: dbo.ntevl_mssql_master 03 null
+2016-07-15 09:55:48,190 DEBUG sk.idm.nssync.Sync: NUM: dbo.ntevl_mssql 02 1
+2016-07-15 09:55:48,190 DEBUG sk.idm.nssync.Sync: NUM: dbo.ntevl_mssql 03 0
+2016-07-15 09:55:48,242 DEBUG sk.idm.nssync.Sync: NUM: 03 1 10000
+2016-07-15 09:55:48,242 DEBUG sk.idm.nssync.Sync: NUM: 03 null 25330
+2016-07-15 09:55:48,243 INFO sk.idm.nssync.Sync: shutdown finished

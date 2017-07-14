@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sk.idm.nssync.elastic;
+
+import java.net.MalformedURLException;
+import java.net.UnknownHostException;
+import org.apache.logging.log4j.LogManager;
+import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsResponse;
+import org.elasticsearch.client.Client;
+import sk.idm.nssync.Config;
+import sk.idm.nssync.NSSyncException;
+
+/**
+ *
+ * @author mhajducek
+ */
+public class Index {
+
+    private static final org.apache.logging.log4j.Logger log = LogManager.getLogger(Index.class);
+
+    /**
+     *
+     * @param indexName
+     * @param nodes
+     * @throws NSSyncException
+     */
+    public static void create(String indexName, String... nodes) throws NSSyncException {
+        try {
+            ConnectionFactory factory = new ConnectionFactory(nodes);
+            Client client = factory.getClient();
+
+            IndicesExistsResponse existsResponse = client.admin().indices().prepareExists(indexName).execute().actionGet();
+
+            if (!existsResponse.isExists()) {
+                log.debug("Index {} does not exist.", indexName);
+                client.admin().indices().prepareCreate(indexName).execute().actionGet();
+                log.debug("Index {} created.", indexName);
+            }
+        } catch (MalformedURLException ex) {
+            log.error("Wrong URL");
+        } catch (UnknownHostException ex) {
+            log.error("Unknown host");
+        }
+    }
+    
+    /**
+     *
+     * @param indexName
+     * @param conf
+     * @throws NSSyncException
+     */
+    public static void create(String indexName, Config conf) throws NSSyncException {
+        create(indexName, conf.clustername, conf.esurl01, conf.esurl02, conf.esurl03);
+    }
+}

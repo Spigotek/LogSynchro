@@ -1,0 +1,157 @@
+package sk.idm.nssync;
+
+import java.io.FileInputStream;
+import sk.idm.nssync.model.SyncInfo;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+import java.util.logging.Level;
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import sk.idm.nssync.elastic.Index;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ *
+ * @author mhajducek
+ */
+public class Config {
+
+    Map<String, SyncInfo> tables;
+    Map<String, String> mapColumns;
+    private Properties conf  = new Properties();
+    protected String COLS_START;
+    protected String COLS_END = " from ";
+
+    private String dburl;
+    private String dbuser;
+    private String dbpwd;
+
+    protected String localhost;
+
+    protected int retries;
+    protected long retrytime;
+    protected int maxRunTimeMin;
+    protected String backupPath;
+
+    protected int dbpoolsize;
+    protected int readthreads;
+    protected int writerthreads;
+    protected int updatethreads;
+    public int bulkwritesize;
+    protected int updatequeue;
+    protected long maxRows;
+    protected String targetDateTimeFormat;
+    protected String fallbackDateTimeFormat;
+
+    public String esurl01;
+    public String esurl02;
+    public String esurl03;
+    public String clustername;
+    private BasicDataSource dbPool;
+    private static final Logger log = LogManager.getLogger(Config.class);
+    public long updatequeuetimeout = 1;
+    public long readqueuetimeout = 1;
+
+    public BasicDataSource getDbPool() {
+        log.debug("DBpool active/idle: " + dbPool.getNumActive() + "/" + dbPool.getNumIdle());
+        return dbPool;
+    }
+
+    public Config(String configFile) {
+
+        InputStreamReader isr = null;
+        try {
+            tables = new HashMap<>();
+            isr = new InputStreamReader(new FileInputStream(configFile), "UTF-8");
+            conf.load(isr);
+            int i = 1;
+            String p;
+            while ((p = conf.getProperty("select" + ("00" + i).substring(("00" + i).length() - 2, ("00" + i).length()))) != null) {
+                String key1 = "select" + ("00" + i).substring(("00" + i).length() - 2, ("00" + i).length());
+                String key2 = key1.replaceAll("select", "columntoelastic");
+                String key3 = key1.replaceAll("select", "index");
+
+                String indexNameTemplate = conf.getProperty(key3);
+                DateFormat df = new SimpleDateFormat(indexNameTemplate.substring(indexNameTemplate.indexOf('-')));
+                String indexName = indexNameTemplate.substring(0, indexNameTemplate.indexOf('-')) + df.format(new Date());
+
+                String key4 = key1.replaceAll("select", "maping");
+
+                String key5 = key1.replaceAll("select", "table");
+                String key6 = key1.replaceAll("select", "timestampcol");
+                String key7 = key1.replaceAll("select", "datetimeformat");
+
+                SyncInfo info = new SyncInfo(String.valueOf(i), p, indexName, conf.getProperty(key4), conf.getProperty(key5), conf.getProperty(key6), conf.getProperty(key7), conf.getProperty(key2));
+                tables.put(info.table, info);
+                i++;
+            }
+            COLS_START = conf.getProperty("cols_start");
+            dburl = conf.getProperty("dburl");
+            dbuser = conf.getProperty("dbuser");
+            dbpwd = conf.getProperty("dbpwd");
+            localhost = conf.getProperty("localhost");
+            retries = Integer.parseInt(conf.getProperty("retries"));
+            retrytime = Long.parseLong(conf.getProperty("retrytime"));
+            dbpoolsize = Integer.parseInt(conf.getProperty("dbpoolsize"));
+            updatethreads = Integer.parseInt(conf.getProperty("updatethreads"));
+            writerthreads = Integer.parseInt(conf.getProperty("writerthreads"));
+            readthreads = Integer.parseInt(conf.getProperty("readthreads"));
+            bulkwritesize = Integer.parseInt(conf.getProperty("bulkwritesize"));
+            updatequeue = Integer.parseInt(conf.getProperty("updatequeue"));
+            maxRows = Long.parseLong(conf.getProperty("max_rows"));
+            maxRunTimeMin = Integer.parseInt(conf.getProperty("maxRunTimeMin"));
+            backupPath = conf.getProperty("backuppath");
+            targetDateTimeFormat = conf.getProperty("targetdatetimeformat");
+            fallbackDateTimeFormat = conf.getProperty("fallbackdatetimeformat");
+            updatequeuetimeout = Long.parseLong(conf.getProperty("updatequeuetimeout"));
+            readqueuetimeout = Long.parseLong(conf.getProperty("readqueuetimeout"));
+            esurl01 = conf.getProperty("esurl01");
+            esurl02 = conf.getProperty("esurl02");
+            esurl03 = conf.getProperty("esurl03");
+            clustername = conf.getProperty("clustername");
+            String driverClassName = conf.getProperty("driverclassname");
+            dbPool = new BasicDataSource();
+            dbPool.setUrl(dburl);
+            dbPool.setUsername(dbuser);
+            dbPool.setPassword(dbpwd);
+            dbPool.setDriverClassName(driverClassName);
+            dbPool.setInitialSize(dbpoolsize);
+            //create configured indexes and create map of db col to elastic field mapping
+            mapColumns = new HashMap<>();
+            for (String t : tables.keySet()) {
+                String tmp[] = tables.get(t).columntoelastic.split(";");
+                for (String tmpCol : tmp) {
+                    mapColumns.put(t + tmpCol.split("#")[0], tmpCol.split("#")[1]);
+                }
+
+                String index = tables.get(t).index;
+                Index.create(index, clustername, esurl01, esurl02, esurl03);
+            }
+            isr.close();
+        } catch (UnsupportedEncodingException ex) {
+            java.util.logging.Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException | NSSyncException ex) {
+            java.util.logging.Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if (isr != null) {
+                    isr.close();
+                }
+            } catch (Exception ex) {
+                java.util.logging.Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+}
